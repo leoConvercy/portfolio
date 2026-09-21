@@ -262,19 +262,36 @@
       margin-bottom: 48px;
     }
 
-    .contact-email {
-      font-family: 'Rengok', serif;
-      font-style: italic;
-      font-size: 26px;
-      font-weight: 300;
-      color: #2a1c10;
-      text-decoration: none;
-      border-bottom: 1px solid var(--pale);
-      padding-bottom: 4px;
-      transition: border-color 0.3s var(--ease);
-      display: inline-block;
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
-    .contact-email:hover { border-color: var(--fg); }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #2a1c10;
+      transition: opacity 0.25s;
+    }
+    .contact-link:hover { opacity: 0.55; }
+
+    .contact-link-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      color: #a08060;
+    }
+
+    .contact-link-label {
+      font-family: 'Rengok', serif;
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      line-height: 1;
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -488,9 +505,26 @@
     For advertising, film, fashion,<br>
     beauty or other visual projects.
   </p>
-  <a href="mailto:leeo.sd.music@gmail.com" class="contact-email">leeo.sd.music@gmail.com</a>
+  <div class="divider" style="margin: 0 auto 48px;"><span></span></div>
+  <div class="contact-links" style="align-items:center;">
+    <a href="mailto:leeo.sd.music@gmail.com" class="contact-link">
+      <svg class="contact-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <polyline points="2,4 12,13 22,4"/>
+      </svg>
+      <span class="contact-link-label">Email</span>
+    </a>
+    <a href="https://wa.me/33651586459" class="contact-link" target="_blank" rel="noopener">
+      <svg class="contact-link-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.07-1.35C8.46 21.51 10.19 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.2-.47-4.52-1.28l-.32-.19-3.01.8.81-2.96-.21-.34C3.47 15.17 3 13.63 3 12 3 7.03 7.03 3 12 3s9 4.03 9 9-4.03 9-9 9z"/>
+      </svg>
+      <span class="contact-link-label">WhatsApp</span>
+    </a>
+  </div>
 </section>
 
+<div class="divider"><span></span></div>
 <footer>
   <span>© 2026 Léo Convercy</span>
   <div class="footer-clock">
